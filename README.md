@@ -11,9 +11,9 @@ Please run ?- license. for legal details.
 For online help and background, visit https://www.swi-prolog.org
 For built-in help, use ?- help(Topic). or ?- apropos(Word).
 
-?- run(app(lambda(x,tynat,var(x)),succ(zero)),V,T).
-V = succ(0),
-T = tynat .
+?- run(app(lambda(x,tynat,var(x)),succ(zero))).
+succ(0):tynat
+true .
 
 ```
 

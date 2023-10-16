@@ -34,4 +34,4 @@ eval(Env,app(E1,E2),V) :- eval(Env,E1,cls(Env1,lambda(X,_,E))), eval(Env,E2,V1),
 lookupval(bindval(X,V),[bindval(X1,V1)|_]) :- X = X1, V = V1.
 lookupval(bindval(X,V),[bindval(X1,_)|Xs]) :- X \== X1, lookupty(bindval(X,V),Xs).
 
-run(E,V,T) :- typing([],E,T), eval([],E,V).
+run(E) :- typing([],E,T), eval([],E,V), writeln(V:T).
